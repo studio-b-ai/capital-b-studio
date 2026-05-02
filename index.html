@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio B Capital — Not sourced. Surfaced.</title>
+
+  <!-- SEO -->
+  <meta name="description" content="The businesses we back have been in our network for years — advised, measured, and run alongside. We're not introduced to the opportunity. We're already trusted by the operator.">
+
+  <!-- OG tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Studio B Capital">
+  <meta property="og:title" content="Not sourced. Surfaced.">
+  <meta property="og:description" content="The businesses we back have been in our network for years — advised, measured, and run alongside. We're not introduced to the opportunity. We're already trusted by the operator.">
+  <meta property="og:url" content="https://capital.b.studio">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,900&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --forest: #1A3328;
+      --paper: #F4F1EB;
+      --yolk: #F7D344;
+      --ink: #0D0D0D;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--forest);
+      color: var(--paper);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Caution stripe */
+    .stripe {
+      height: 6px;
+      width: 100%;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--yolk) 0, var(--yolk) 8px,
+        var(--forest) 8px, var(--forest) 16px
+      );
+    }
+
+    /* Hero */
+    .hero {
+      padding: 5rem 4rem 4rem;
+      max-width: 960px;
+      border-bottom: 3px solid var(--ink);
+    }
+
+    .firm-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(244, 241, 235, 0.45);
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 0.93;
+      letter-spacing: -0.03em;
+      color: var(--paper);
+      margin-bottom: 1.75rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--yolk);
+    }
+
+    .hero-body {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(244, 241, 235, 0.72);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.7rem 1.5rem;
+      border: 2px solid var(--paper);
+      color: var(--paper);
+      text-decoration: none;
+      transition: background 0.12s, color 0.12s;
+    }
+
+    .cta:hover {
+      background: var(--paper);
+      color: var(--forest);
+    }
+
+    /* Booking section */
+    .booking {
+      padding: 4rem;
+      border-bottom: 3px solid var(--ink);
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.52rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(244, 241, 235, 0.35);
+      margin-bottom: 1.5rem;
+    }
+
+    .meetings-iframe-container iframe {
+      border: 3px solid var(--ink) !important;
+    }
+
+    /* Footer */
+    footer {
+      padding: 1.75rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(244, 241, 235, 0.25);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(244, 241, 235, 0.35);
+      text-decoration: none;
+      transition: color 0.12s;
+    }
+
+    .footer-links a:hover { color: var(--yolk); }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .hero { padding: 3rem 1.5rem 2.5rem; }
+      .booking { padding: 2.5rem 1.5rem; }
+      footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="stripe"></div>
+
+<section class="hero">
+  <p class="firm-label">Studio B Capital &middot; Investment firm &middot; $100M target &middot; lower middle market</p>
+  <h1>Not sourced. <em>Surfaced.</em></h1>
+  <p class="hero-body">The businesses we back have been in our network for years — advised, measured, and run alongside. We're not introduced to the opportunity. We're already trusted by the operator.</p>
+  <a href="#book" class="cta">Book a call</a>
+</section>
+
+<section class="booking" id="book">
+  <p class="section-label">LP inquiry &middot; book a call</p>
+  <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/bibelhausen/studio-b-capital-lp-inquiry?embed=true&color=1A3328"></div>
+  <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+</section>
+
+<footer>
+  <p class="footer-copy">&copy; 2026 Studio B Consulting, LLC</p>
+  <ul class="footer-links">
+    <li><a href="https://b.studio">Studio B</a></li>
+    <li><a href="https://consulting.b.studio">Consulting</a></li>
+    <li><a href="https://benchmarks.b.studio">Benchmarks</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

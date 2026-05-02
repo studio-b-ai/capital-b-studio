@@ -3,172 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio B Capital — Not sourced. Surfaced.</title>
-
-  <!-- SEO -->
-  <meta name="description" content="The businesses we back have been in our network for years — advised, measured, and run alongside. We're not introduced to the opportunity. We're already trusted by the operator.">
-
-  <!-- OG tags -->
+  <title>Studio B Capital — The Non-Bank Lender for the Global Lower Middle Market</title>
+  <meta name="description" content="The deepest gap in LMM credit is not where banks won't lend — it is where banks cannot move quickly enough, structure flexibly enough, or stay long enough.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Studio B Capital">
-  <meta property="og:title" content="Not sourced. Surfaced.">
-  <meta property="og:description" content="The businesses we back have been in our network for years — advised, measured, and run alongside. We're not introduced to the opportunity. We're already trusted by the operator.">
+  <meta property="og:title" content="The Non-Bank Lender for the Global Lower Middle Market">
+  <meta property="og:description" content="Bridge with Conversion — the loss case becomes the ownership case. Four LP-exclusive equity mechanisms. Transatlantic from day one.">
   <meta property="og:url" content="https://capital.b.studio">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,900&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     :root {
       --forest: #1A3328;
       --paper: #F4F1EB;
       --yolk: #F7D344;
       --ink: #0D0D0D;
     }
-
     html { scroll-behavior: smooth; }
+    body { background: var(--forest); color: var(--paper); font-family: 'Inter', sans-serif; min-height: 100vh; }
 
-    body {
-      background: var(--forest);
-      color: var(--paper);
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-    }
-
-    /* Caution stripe */
     .stripe {
-      height: 6px;
-      width: 100%;
-      background: repeating-linear-gradient(
-        -45deg,
-        var(--yolk) 0, var(--yolk) 8px,
-        var(--forest) 8px, var(--forest) 16px
-      );
+      height: 6px; width: 100%;
+      background: repeating-linear-gradient(-45deg, var(--yolk) 0, var(--yolk) 8px, var(--forest) 8px, var(--forest) 16px);
     }
 
-    /* Hero */
-    .hero {
-      padding: 5rem 4rem 4rem;
-      max-width: 960px;
-      border-bottom: 3px solid var(--ink);
+    /* Nav */
+    .nav {
+      padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid rgba(244,241,235,0.08);
     }
-
-    .firm-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(244, 241, 235, 0.45);
-      margin-bottom: 2rem;
+    .nav-mark {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(244,241,235,0.5);
     }
+    .nav-cta {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: rgba(244,241,235,0.4);
+      text-decoration: none; transition: color 0.12s;
+    }
+    .nav-cta:hover { color: var(--yolk); }
 
+    /* Hero — restrained */
+    .hero { padding: 6rem 4rem 5rem; border-bottom: 1px solid rgba(244,241,235,0.08); }
+    .hero-inner { max-width: 760px; }
+    .hero-overline {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--yolk); margin-bottom: 2rem;
+    }
     h1 {
-      font-family: 'Fraunces', serif;
-      font-weight: 900;
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      line-height: 0.93;
-      letter-spacing: -0.03em;
-      color: var(--paper);
-      margin-bottom: 1.75rem;
+      font-family: 'Fraunces', serif; font-weight: 900;
+      font-size: clamp(2.4rem, 4.5vw, 4rem); line-height: 1.0; letter-spacing: -0.03em;
+      color: var(--paper); margin-bottom: 2rem;
     }
-
-    h1 em {
-      font-style: italic;
-      color: var(--yolk);
-    }
-
+    h1 em { font-style: italic; color: var(--yolk); }
     .hero-body {
-      font-size: 1.05rem;
-      line-height: 1.65;
-      color: rgba(244, 241, 235, 0.72);
-      max-width: 560px;
-      margin-bottom: 2.5rem;
+      font-size: 1rem; line-height: 1.75; color: rgba(244,241,235,0.65); margin-bottom: 3rem; max-width: 560px;
     }
-
     .cta {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.7rem 1.5rem;
-      border: 2px solid var(--paper);
-      color: var(--paper);
-      text-decoration: none;
-      transition: background 0.12s, color 0.12s;
+      display: inline-block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.75rem 1.75rem; border: 2px solid var(--paper);
+      color: var(--paper); text-decoration: none; transition: background 0.12s, color 0.12s;
+    }
+    .cta:hover { background: var(--paper); color: var(--forest); }
+
+    /* Narrative — paper */
+    .narrative { background: var(--paper); color: var(--ink); padding: 0 4rem; border-bottom: 3px solid var(--ink); }
+    .narr-section {
+      display: grid; grid-template-columns: 180px 1fr; gap: 4rem;
+      padding: 5rem 0; border-bottom: 1px solid rgba(13,13,13,0.08);
+    }
+    .narr-section:last-child { border-bottom: none; }
+    .narr-marker { padding-top: 0.3rem; }
+    .narr-marker-num {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(13,13,13,0.28); margin-bottom: 0.35rem;
+    }
+    .narr-marker-title {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: rgba(13,13,13,0.5);
+    }
+    .narr-body h2 {
+      font-family: 'Fraunces', serif; font-weight: 900;
+      font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.1; letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+    }
+    .narr-body p { font-size: 0.95rem; line-height: 1.75; color: rgba(13,13,13,0.7); margin-bottom: 1rem; }
+    .narr-body p:last-child { margin-bottom: 0; }
+    .narr-body a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+    .narr-body a:hover { color: rgba(13,13,13,0.5); }
+
+    /* Product specs inline */
+    .spec-row {
+      margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px dashed rgba(13,13,13,0.15);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+    }
+    .spec-card { padding: 1.25rem 1.5rem; border: 2px solid var(--ink); }
+    .spec-card.flagship { background: var(--forest); color: var(--paper); border-color: var(--forest); }
+    .spec-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: rgba(13,13,13,0.4); margin-bottom: 0.35rem;
+    }
+    .spec-card.flagship .spec-tag { color: var(--yolk); }
+    .spec-name {
+      font-family: 'Fraunces', serif; font-weight: 900; font-style: italic;
+      font-size: 1.1rem; letter-spacing: -0.02em; margin-bottom: 0.85rem;
+    }
+    .spec-card.flagship .spec-name { color: var(--yolk); }
+    .spec-terms {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; line-height: 1.7;
+      color: rgba(13,13,13,0.65);
+    }
+    .spec-card.flagship .spec-terms { color: rgba(244,241,235,0.7); }
+    .spec-terms strong { color: var(--ink); }
+    .spec-card.flagship .spec-terms strong { color: var(--yolk); }
+
+    /* Fund terms */
+    .fund-terms { display: flex; flex-direction: column; margin-top: 1.5rem; }
+    .fund-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 0.85rem 0; border-bottom: 1px solid rgba(13,13,13,0.08);
+    }
+    .fund-row:first-child { border-top: 1px solid rgba(13,13,13,0.08); }
+    .fund-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: rgba(13,13,13,0.4);
+    }
+    .fund-value { font-size: 0.88rem; color: rgba(13,13,13,0.8); text-align: right; max-width: 55%; }
+
+    /* SBDLI strip */
+    .sbdli-strip {
+      margin-top: 1.75rem; padding: 1.5rem 1.75rem;
+      border: 2px solid var(--ink); background: transparent;
+      display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start;
+    }
+    .sbdli-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(13,13,13,0.35);
+      padding-top: 0.1rem; white-space: nowrap;
+    }
+    .sbdli-body { font-size: 0.88rem; line-height: 1.6; color: rgba(13,13,13,0.65); }
+    .sbdli-body a { color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Gateway */
+    .gateway-section {
+      background: var(--forest); padding: 5rem 4rem; border-bottom: 3px solid rgba(244,241,235,0.08);
+    }
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(244,241,235,0.35); margin-bottom: 1rem;
+    }
+    .gateway-section h2 {
+      font-family: 'Fraunces', serif; font-weight: 900;
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem); line-height: 1.1; letter-spacing: -0.03em;
+      color: var(--paper); margin-bottom: 0.75rem; max-width: 640px;
+    }
+    .gateway-intro {
+      font-size: 0.92rem; line-height: 1.7; color: rgba(244,241,235,0.6); margin-bottom: 3rem; max-width: 560px;
+    }
+    .gateway-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .gw-card {
+      padding: 2rem 1.75rem; border: 1px solid rgba(247,211,68,0.2);
+      border-right: none;
+    }
+    .gw-card:first-child { border-left: 1px solid rgba(247,211,68,0.2); }
+    .gw-num {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; font-weight: 700;
+      letter-spacing: 0.2em; color: rgba(247,211,68,0.5); margin-bottom: 0.75rem;
+    }
+    .gw-title {
+      font-family: 'Fraunces', serif; font-weight: 900; font-style: italic;
+      font-size: 1rem; letter-spacing: -0.02em; color: var(--yolk); margin-bottom: 0.5rem;
+    }
+    .gw-body { font-size: 0.82rem; line-height: 1.55; color: rgba(244,241,235,0.6); }
+    .gateway-note {
+      margin-top: 2rem; font-size: 0.82rem; line-height: 1.6; color: rgba(244,241,235,0.4); font-style: italic;
     }
 
-    .cta:hover {
-      background: var(--paper);
-      color: var(--forest);
+    /* Inquiry */
+    .inquiry-section { background: var(--paper); color: var(--ink); padding: 5rem 4rem; }
+    .inq-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
+    .section-tag-dark {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(13,13,13,0.35); margin-bottom: 1rem;
     }
-
-    /* Booking section */
-    .booking {
-      padding: 4rem;
-      border-bottom: 3px solid var(--ink);
+    .inq-copy h2 {
+      font-family: 'Fraunces', serif; font-weight: 900;
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1rem;
     }
+    .inq-copy p { font-size: 0.9rem; line-height: 1.7; color: rgba(13,13,13,0.6); margin-bottom: 0.65rem; }
+    .meetings-iframe-container iframe { border: 3px solid var(--ink) !important; }
 
-    .section-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.52rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(244, 241, 235, 0.35);
-      margin-bottom: 1.5rem;
-    }
-
-    .meetings-iframe-container iframe {
-      border: 3px solid var(--ink) !important;
-    }
-
-    /* Footer */
     footer {
-      padding: 1.75rem 4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      background: var(--forest); padding: 1.75rem 4rem; display: flex;
+      justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+      border-top: 1px solid rgba(244,241,235,0.08);
     }
-
     .footer-copy {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.5rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(244, 241, 235, 0.25);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: rgba(244,241,235,0.25);
     }
-
-    .footer-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
     .footer-links a {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.5rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(244, 241, 235, 0.35);
-      text-decoration: none;
-      transition: color 0.12s;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: rgba(244,241,235,0.35);
+      text-decoration: none; transition: color 0.12s;
     }
-
     .footer-links a:hover { color: var(--yolk); }
 
-    /* Mobile */
-    @media (max-width: 640px) {
-      .hero { padding: 3rem 1.5rem 2.5rem; }
-      .booking { padding: 2.5rem 1.5rem; }
+    @media (max-width: 768px) {
+      .nav { padding: 1.25rem 1.5rem; }
+      .hero { padding: 3rem 1.5rem 3rem; }
+      .narrative { padding: 0 1.5rem; }
+      .narr-section { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 0; }
+      .spec-row { grid-template-columns: 1fr; }
+      .sbdli-strip { grid-template-columns: 1fr; gap: 0.75rem; }
+      .gateway-section, .inquiry-section { padding: 3rem 1.5rem; }
+      .gateway-grid { grid-template-columns: 1fr 1fr; }
+      .gw-card { border-right: 1px solid rgba(247,211,68,0.2); }
+      .inq-inner { grid-template-columns: 1fr; gap: 3rem; }
       footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -177,17 +232,168 @@
 
 <div class="stripe"></div>
 
+<nav class="nav">
+  <span class="nav-mark">Studio B Capital &middot; capital.b.studio</span>
+  <a href="#inquiry" class="nav-cta">LP inquiry →</a>
+</nav>
+
 <section class="hero">
-  <p class="firm-label">Studio B Capital &middot; Investment firm &middot; $100M target &middot; lower middle market</p>
-  <h1>Not sourced. <em>Surfaced.</em></h1>
-  <p class="hero-body">The businesses we back have been in our network for years — advised, measured, and run alongside. We're not introduced to the opportunity. We're already trusted by the operator.</p>
-  <a href="#book" class="cta">Book a call</a>
+  <div class="hero-inner">
+    <p class="hero-overline">Non-bank lender &middot; Global lower middle market &middot; Fund I</p>
+    <h1>The Non-Bank Lender for the Global <em>Lower Middle Market.</em></h1>
+    <p class="hero-body">The deepest structural gap in LMM credit is not where banks won't lend — it is where banks cannot move quickly enough, structure flexibly enough, or stay long enough. Studio B Capital is purpose-built for that gap.</p>
+    <a href="#inquiry" class="cta">Request LP materials</a>
+  </div>
 </section>
 
-<section class="booking" id="book">
-  <p class="section-label">LP inquiry &middot; book a call</p>
-  <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/bibelhausen/studio-b-capital-lp-inquiry?embed=true&color=1A3328"></div>
-  <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+<div class="narrative">
+
+  <div class="narr-section">
+    <div class="narr-marker">
+      <div class="narr-marker-num">01—</div>
+      <div class="narr-marker-title">The Gap</div>
+    </div>
+    <div class="narr-body">
+      <h2>Banks won't be wrong to eventually lend. They simply cannot act.</h2>
+      <p>Lower middle market businesses hit moments that require speed, structural flexibility, or longer patience than a conventional bank can deliver. An acquisition that closes in 30 days. A seasonal working capital need with an unusual repayment shape. A business that will be bankable in 18 months but needs a bridge partner today.</p>
+      <p>This is not a credit quality gap — these businesses would ultimately qualify. It is a capability gap. Banks cannot move on LMM timelines, structure for LMM complexity, or commit to LMM transition periods. That gap is Studio B Capital's market.</p>
+      <p>Every credit is underwritten to bankable standards with a pre-validated takeout path: SBA in the U.S., conventional bank or BDC in Canada, challenger bank or British Business Bank in the U.K. We bridge operators to the moment they qualify — and convert on the rare occasion they don't arrive on time.</p>
+    </div>
+  </div>
+
+  <div class="narr-section">
+    <div class="narr-marker">
+      <div class="narr-marker-num">02—</div>
+      <div class="narr-marker-title">Two products</div>
+    </div>
+    <div class="narr-body">
+      <h2>One chassis. Two products. Conversion right standard on the flagship.</h2>
+      <p>Bridge with Conversion (~75% of fund) is the signature product. Short-duration senior credit underwritten to bankable standards. The distinguishing feature: a conversion right exercisable on non-takeout at maturity, converting principal into equity at the greater of 4× trailing EBITDA or original deal valuation. The rare loss case becomes an equity ownership case in a business we've already underwritten.</p>
+      <p>Core LMM with Warrants (~10% of fund) is selective — senior credit with longer hold for higher-quality operators where Studio B Capital becomes a long-term capital partner. These are businesses built through years of transatlantic relationships. Embedded warrants on every deal. These relationships generate the proactive co-invest SPV opportunities that flow exclusively to fund LPs.</p>
+      <div class="spec-row">
+        <div class="spec-card flagship">
+          <p class="spec-tag">Flagship · ~75%</p>
+          <p class="spec-name">Bridge with Conversion</p>
+          <div class="spec-terms">
+            <strong>17%</strong> interest only<br>
+            <strong>4%</strong> origination fee<br>
+            <strong>12–24mo</strong> term · 18mo avg hold<br>
+            1st lien · personal guarantee<br>
+            Conversion right standard
+          </div>
+        </div>
+        <div class="spec-card">
+          <p class="spec-tag">Selective · ~10%</p>
+          <p class="spec-name">Core LMM with Warrants</p>
+          <div class="spec-terms">
+            <strong>12%</strong> interest · 5–7yr amort<br>
+            <strong>1.5%</strong> origination fee<br>
+            <strong>5%</strong> warrant coverage<br>
+            Penny strike · 7–10yr exercise<br>
+            Long-term capital partner
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="narr-section">
+    <div class="narr-marker">
+      <div class="narr-marker-num">03—</div>
+      <div class="narr-marker-title">Fund structure</div>
+    </div>
+    <div class="narr-body">
+      <h2>BVI master + Delaware feeder. Quarterly distributions. LP-first waterfall.</h2>
+      <p>Closed-end, 7-year life. 4-year reinvestment period, 3-year harvest. Non-U.S. investors access the fund without entanglement in the U.S. tax perimeter. ILPA-aligned reporting from inception.</p>
+      <div class="fund-terms">
+        <div class="fund-row">
+          <span class="fund-label">Vehicle</span>
+          <span class="fund-value">BVI master + Delaware feeder</span>
+        </div>
+        <div class="fund-row">
+          <span class="fund-label">Distributions</span>
+          <span class="fund-value">Quarterly throughout fund life</span>
+        </div>
+        <div class="fund-row">
+          <span class="fund-label">Management fee</span>
+          <span class="fund-value">2.0% on committed (Yrs 1–4) · 1.5% on invested (Yrs 5–7)</span>
+        </div>
+        <div class="fund-row">
+          <span class="fund-label">Waterfall</span>
+          <span class="fund-value">10% pref · 100% GP catch-up to 20% · 80/20 · LP-first money out</span>
+        </div>
+        <div class="fund-row">
+          <span class="fund-label">Target return</span>
+          <span class="fund-value">10–11% credit-fund-only · 13–15% active-LP blended (provisional)</span>
+        </div>
+        <div class="fund-row">
+          <span class="fund-label">First close</span>
+          <span class="fund-value">Q3 2026 · Qualified purchasers &amp; institutional LPs only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="narr-section">
+    <div class="narr-marker">
+      <div class="narr-marker-num">04—</div>
+      <div class="narr-marker-title">The research</div>
+    </div>
+    <div class="narr-body">
+      <h2>The same data that informs our underwriting is published publicly every quarter.</h2>
+      <p>Studio B Capital sits inside a broader consulting and research practice. The consulting work puts us in rooms with operators, advisors, and capital providers across the US and UK lower middle market. That access produces relationships — and it produces data.</p>
+      <p>The Studio B Direct Lending Index (SBDLI) is our quarterly publication tracking direct lending rates, structures, and recovery patterns across both jurisdictions. It draws on thirty years of cross-jurisdictional default and recovery data assembled by the principals. We publish it because the market is opaque and LPs deserve to see the benchmarks before they commit capital.</p>
+      <div class="sbdli-strip">
+        <span class="sbdli-label">SBDLI</span>
+        <p class="sbdli-body">Studio B Direct Lending Index — published quarterly at <a href="https://benchmarks.b.studio">benchmarks.b.studio</a>. US and UK lower middle market direct lending rates, structures, and recovery data. LP participation in Fund I includes full dataset access and backtesting access.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section class="gateway-section">
+  <p class="section-tag">LP-exclusive equity gateway</p>
+  <h2>Four mechanisms. One fund. Never offered to outside capital.</h2>
+  <p class="gateway-intro">The credit relationship is the gateway to private equity dealflow. Every LP has access to four equity exposure mechanisms that Studio B Capital will never offer to non-fund capital.</p>
+  <div class="gateway-grid">
+    <div class="gw-card">
+      <div class="gw-num">01</div>
+      <div class="gw-title">Embedded warrants</div>
+      <div class="gw-body">Warrants on every Core LMM deal — penny strike, 7–10yr exercise. Equity participation in every long-term credit relationship.</div>
+    </div>
+    <div class="gw-card">
+      <div class="gw-num">02</div>
+      <div class="gw-title">Conversion equity</div>
+      <div class="gw-body">Bridge non-takeout converts to equity at greater of 4× EBITDA or deal valuation. The loss case becomes the ownership case.</div>
+    </div>
+    <div class="gw-card">
+      <div class="gw-num">03</div>
+      <div class="gw-title">Proactive co-invest SPVs</div>
+      <div class="gw-body">LP-discretionary SPV participation alongside portfolio companies at their equity moments. 50bps mgmt · 10% pref · full GP catch-up · 80/20.</div>
+    </div>
+    <div class="gw-card" style="border-right: 1px solid rgba(247,211,68,0.2);">
+      <div class="gw-num">04</div>
+      <div class="gw-title">Conversion follow-on SPVs</div>
+      <div class="gw-body">LPs can follow conversion events with additional equity at Studio B Capital's per-deal pricing. First right on every converted position.</div>
+    </div>
+  </div>
+  <p class="gateway-note">SPV economics: 50bps management fee · 10% preferred return · full GP catch-up · 80/20 split. Offered exclusively to fund LPs — never to outside capital. The credit relationship is the moat.</p>
+</section>
+
+<section class="inquiry-section" id="inquiry">
+  <div class="inq-inner">
+    <div class="inq-copy">
+      <p class="section-tag-dark">Preliminary LP inquiry</p>
+      <h2>We'll talk plainly.</h2>
+      <p>Studio B Capital is a confidential investor opportunity. No deck until after the first call. Book a time and we'll talk about the fund, the products, and whether there's a fit.</p>
+      <p>Qualified purchasers and institutional LPs only. Fund I first close Q3 2026. Anchor LPs receive founding-LP economics: fee concessions, MFN + syndication rights, LPAC seat option.</p>
+    </div>
+    <div>
+      <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/bibelhausen/studio-b-capital-lp-inquiry?embed=true&color=1A3328"></div>
+      <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+    </div>
+  </div>
 </section>
 
 <footer>

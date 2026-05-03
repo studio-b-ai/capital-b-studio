@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio B Capital — The Non-Bank Lender for the Global Lower Middle Market</title>
+  <title>Capital, by Studio b. — The Non-Bank Lender for the Global Lower Middle Market</title>
   <meta name="description" content="The deepest gap in LMM credit is not where banks won't lend — it is where banks cannot move quickly enough, structure flexibly enough, or stay long enough.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Studio B Capital">
+  <meta property="og:site_name" content="Capital, by Studio b.">
   <meta property="og:title" content="The Non-Bank Lender for the Global Lower Middle Market">
   <meta property="og:description" content="Bridge with Conversion — the loss case becomes the ownership case. Four LP-exclusive equity mechanisms. Transatlantic from day one.">
   <meta property="og:url" content="https://capital.b.studio">
@@ -29,6 +29,10 @@
       height: 6px; width: 100%;
       background: repeating-linear-gradient(-45deg, var(--yolk) 0, var(--yolk) 8px, var(--forest) 8px, var(--forest) 16px);
     }
+    .stripe-transition {
+      height: 6px; width: 100%;
+      background: repeating-linear-gradient(-45deg, var(--yolk) 0, var(--yolk) 8px, var(--ink) 8px, var(--ink) 16px);
+    }
 
     /* Nav */
     .nav {
@@ -38,16 +42,28 @@
     .nav-mark {
       font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; font-weight: 700;
       letter-spacing: 0.2em; text-transform: uppercase; color: rgba(244,241,235,0.5);
+      display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.5rem;
     }
     .nav-cta {
       font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; font-weight: 700;
       letter-spacing: 0.15em; text-transform: uppercase; color: rgba(244,241,235,0.4);
       text-decoration: none; transition: color 0.12s;
+      display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.5rem;
     }
     .nav-cta:hover { color: var(--yolk); }
 
+    /* DLI Ticker */
+    .dli-ticker-wrap { background: var(--yolk); color: var(--forest); padding: 0 4rem; border-bottom: 2px solid rgba(26,51,40,0.18); }
+    .dli-ticker-line { display: flex; align-items: center; padding: 0.55rem 0; font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; flex-wrap: wrap; gap: 0; }
+    .dli-ticker-sep { margin: 0 0.65rem; opacity: 0.4; }
+    .dli-ticker-label { opacity: 0.7; font-weight: 500; }
+    .dli-ticker-value { font-weight: 700; }
+    .dli-ticker-link { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(26,51,40,0.3); padding-bottom: 1px; margin-left: auto; transition: border-color 0.12s; white-space: nowrap; }
+    .dli-ticker-link:hover { border-color: var(--forest); }
+    .dli-footnote-line { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.04em; color: rgba(26,51,40,0.5); padding: 0 0 0.45rem; line-height: 1.7; }
+
     /* Hero — restrained */
-    .hero { padding: 6rem 4rem 5rem; border-bottom: 1px solid rgba(244,241,235,0.08); }
+    .hero { padding: 4rem 4rem; border-bottom: 1px solid rgba(244,241,235,0.08); }
     .hero-inner { max-width: 760px; }
     .hero-overline {
       font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; font-weight: 700;
@@ -60,20 +76,20 @@
     }
     h1 em { font-style: italic; color: var(--yolk); }
     .hero-body {
-      font-size: 1rem; line-height: 1.75; color: rgba(244,241,235,0.65); margin-bottom: 3rem; max-width: 560px;
+      font-size: 1rem; line-height: 1.75; color: rgba(244,241,235,0.65); margin-bottom: 2.5rem; max-width: 560px;
     }
     .cta {
       display: inline-block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em;
-      text-transform: uppercase; padding: 0.75rem 1.75rem; border: 2px solid var(--paper);
-      color: var(--paper); text-decoration: none; transition: background 0.12s, color 0.12s;
+      text-transform: uppercase; padding: 0.85rem 2rem; background: var(--yolk);
+      color: var(--forest); text-decoration: none; transition: opacity 0.12s;
     }
-    .cta:hover { background: var(--paper); color: var(--forest); }
+    .cta:hover { opacity: 0.88; }
 
     /* Narrative — paper */
     .narrative { background: var(--paper); color: var(--ink); padding: 0 4rem; border-bottom: 3px solid var(--ink); }
     .narr-section {
       display: grid; grid-template-columns: 180px 1fr; gap: 4rem;
-      padding: 5rem 0; border-bottom: 1px solid rgba(13,13,13,0.08);
+      padding: 3rem 0; border-bottom: 1px solid rgba(13,13,13,0.08);
     }
     .narr-section:last-child { border-bottom: none; }
     .narr-marker { padding-top: 0.3rem; }
@@ -90,7 +106,7 @@
       font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.1; letter-spacing: -0.025em;
       margin-bottom: 1.25rem;
     }
-    .narr-body p { font-size: 0.95rem; line-height: 1.75; color: rgba(13,13,13,0.7); margin-bottom: 1rem; }
+    .narr-body p { font-size: 0.95rem; line-height: 1.75; color: rgba(13,13,13,0.7); margin-bottom: 1rem; max-width: 640px; }
     .narr-body p:last-child { margin-bottom: 0; }
     .narr-body a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
     .narr-body a:hover { color: rgba(13,13,13,0.5); }
@@ -183,8 +199,8 @@
     }
 
     /* Inquiry */
-    .inquiry-section { background: var(--paper); color: var(--ink); padding: 5rem 4rem; }
-    .inq-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
+    .inquiry-section { background: var(--paper); color: var(--ink); padding: 4rem; }
+    .inq-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     .section-tag-dark {
       font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; font-weight: 700;
       letter-spacing: 0.2em; text-transform: uppercase; color: rgba(13,13,13,0.35); margin-bottom: 1rem;
@@ -195,7 +211,7 @@
     }
     .inq-copy p { font-size: 0.9rem; line-height: 1.7; color: rgba(13,13,13,0.6); margin-bottom: 0.65rem; }
     /* DLI subscribe */
-    .dli-subscribe { background: var(--paper); color: var(--ink); padding: 4rem; border-bottom: 1px solid rgba(26,51,40,0.15); }
+    .dli-subscribe { background: var(--paper); color: var(--ink); padding: 3rem 4rem; border-bottom: 1px solid rgba(26,51,40,0.15); }
     .dli-inner { max-width: 640px; }
     .dli-kicker {
       font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; font-weight: 700;
@@ -208,6 +224,13 @@
     }
     .dli-body { font-size: 0.92rem; line-height: 1.65; color: rgba(13,13,13,0.65); margin-bottom: 2rem; }
     .beehiiv-embed-container { margin-bottom: 1rem; }
+    .dli-subscribe-link {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.05em; color: var(--ink); text-decoration: none;
+      border-bottom: 2px solid var(--ink); padding-bottom: 2px; display: inline-block;
+      transition: opacity 0.12s;
+    }
+    .dli-subscribe-link:hover { opacity: 0.6; }
 
     /* Inquiry link */
     .inquiry-link {
@@ -252,6 +275,7 @@
       font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
       letter-spacing: 0.15em; text-transform: uppercase; color: rgba(244,241,235,0.35);
       text-decoration: none; transition: color 0.12s;
+      padding: 0.5rem 0; display: inline-block;
     }
     .footer-links a:hover { color: var(--yolk); }
 
@@ -269,36 +293,55 @@
       .inq-inner { grid-template-columns: 1fr; gap: 3rem; }
       footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
     }
+    .firm-label { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(244,241,235,0.3); margin-bottom: 1rem; }
+    .brand-b { text-transform: none; }
   </style>
 </head>
 <body>
 
+<div class="dli-ticker-wrap" id="dli-ticker">
+  <div class="dli-ticker-line">
+    <span>DLI</span>
+    <span class="dli-ticker-sep">·</span>
+    <span class="dli-period">Q1 2025</span>
+    <span class="dli-ticker-sep">·</span>
+    <span><span class="dli-ticker-label">US LMM Spread</span>&nbsp;<span class="dli-spread dli-ticker-value">625 bps</span></span>
+    <span class="dli-ticker-sep dli-recovery-sep">·</span>
+    <span class="dli-metric-uk"><span class="dli-ticker-label">UK LMM Recovery</span>&nbsp;<span class="dli-recovery dli-ticker-value">78%</span></span>
+    <a href="https://benchmarks.b.studio" class="dli-ticker-link">benchmarks.b.studio →</a>
+  </div>
+  <div class="dli-footnote-line">
+    Spread — asset-weighted yield over 3M SOFR, current quarter, eligible LMM BDC universe. &nbsp;&nbsp;
+    Recovery — vintage anchor: Companies House LMM workouts initiated 2018–2022 with realized outcome. Live quarterly tracker arrives v2.
+  </div>
+</div>
+
 <div class="stripe"></div>
 
 <nav class="nav">
-  <span class="nav-mark">Studio B Capital &middot; capital.b.studio</span>
+  <a href="https://b.studio" class="nav-mark"><span class="brand-b">b.</span></a>
   <a href="#inquiry" class="nav-cta">LP inquiry →</a>
 </nav>
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-overline">Non-bank lender &middot; Global lower middle market &middot; Fund I</p>
+    <p class="firm-label">Capital, by Studio <span class="brand-b">b.</span></p>
     <h1>The Non-Bank Lender for the Global <em>Lower Middle Market.</em></h1>
-    <p class="hero-body">The deepest structural gap in LMM credit is not where banks won't lend — it is where banks cannot move quickly enough, structure flexibly enough, or stay long enough. Studio B Capital is purpose-built for that gap.</p>
+    <p class="hero-body">The deepest structural gap in LMM credit is not where banks won't lend — it is where banks cannot move quickly enough, structure flexibly enough, or stay long enough. Capital, by Studio <span class="brand-b">b.</span> is purpose-built for that gap.</p>
     <a href="#inquiry" class="cta">Request LP materials</a>
   </div>
 </section>
 
+<div class="stripe-transition" aria-hidden="true"></div>
+
 <!-- DLI SUBSCRIBE -->
 <section class="dli-subscribe" id="dli">
   <div class="dli-inner">
-    <div class="dli-kicker">DLI, BY STUDIO B</div>
+    <div class="dli-kicker">DLI, by Studio <span class="brand-b">b.</span></div>
     <h2 class="dli-headline">The only open index for LMM direct lending.</h2>
-    <p class="dli-body">Quarterly spread, structure, and recovery data across the global lower middle market. Market event commentary as it happens. We publish it because the benchmarks didn't exist — and LPs deserve to see the data before they commit capital.</p>
+    <p class="dli-body">Studio <span class="brand-b">b.</span> Direct Lending Index — published quarterly at <a href="https://benchmarks.b.studio" style="color:inherit;border-bottom:1px solid rgba(244,241,235,0.3);text-decoration:none;">benchmarks.b.studio</a>. US and UK lower middle market direct lending rates, structures, and recovery data. LP participation in Fund I includes full dataset access and backtesting access.</p>
     <div class="beehiiv-embed-container">
-      <iframe src="https://embeds.beehiiv.com/pub_e647b558-3a6e-4a29-87ff-c5fd2b566c35?slim=true" data-test-id="beehiiv-embed"
-        height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important;
-        background-color: transparent; width: 100%;"></iframe>
+      <a href="https://benchmarks.b.studio" class="dli-subscribe-link">View the index at benchmarks.b.studio →</a>
     </div>
   </div>
 </section>
@@ -311,10 +354,10 @@
       <div class="narr-marker-title">The Gap</div>
     </div>
     <div class="narr-body">
-      <h2>Banks won't be wrong to eventually lend. They simply cannot act.</h2>
+      <h2>Their credit is good. The bank can't move.</h2>
       <p>Lower middle market businesses hit moments that require speed, structural flexibility, or longer patience than a conventional bank can deliver. An acquisition that closes in 30 days. A seasonal working capital need with an unusual repayment shape. A business that will be bankable in 18 months but needs a bridge partner today.</p>
-      <p>This is not a credit quality gap — these businesses would ultimately qualify. It is a capability gap. Banks cannot move on LMM timelines, structure for LMM complexity, or commit to LMM transition periods. That gap is Studio B Capital's market.</p>
-      <p>Every credit is underwritten to bankable standards with a pre-validated takeout path: SBA in the U.S., conventional bank or BDC in Canada, challenger bank or British Business Bank in the U.K. We bridge operators to the moment they qualify — and convert on the rare occasion they don't arrive on time.</p>
+      <p>This is not a credit quality gap — these businesses would ultimately qualify. It is a capability gap. Banks cannot move on LMM timelines, structure for LMM complexity, or commit to LMM transition periods. That gap is Capital, by Studio <span class="brand-b">b.</span>'s market.</p>
+      <p>Every deal is underwritten to bankable standards with a pre-validated takeout path: SBA in the U.S., conventional bank or BDC in Canada, challenger bank or British Business Bank in the U.K. We bridge operators to the moment they qualify — and convert on the rare occasion they don't arrive on time.</p>
     </div>
   </div>
 
@@ -326,7 +369,7 @@
     <div class="narr-body">
       <h2>One chassis. Two products. Conversion right standard on the flagship.</h2>
       <p>Bridge with Conversion (~75% of fund) is the signature product. Short-duration senior credit underwritten to bankable standards. The distinguishing feature: a conversion right exercisable on non-takeout at maturity, converting principal into equity at the greater of 4× trailing EBITDA or original deal valuation. The rare loss case becomes an equity ownership case in a business we've already underwritten.</p>
-      <p>Core LMM with Warrants (~10% of fund) is selective — senior credit with longer hold for higher-quality operators where Studio B Capital becomes a long-term capital partner. These are businesses built through years of transatlantic relationships. Embedded warrants on every deal. These relationships generate the proactive co-invest SPV opportunities that flow exclusively to fund LPs.</p>
+      <p>Core LMM with Warrants (~10% of fund) is selective — senior credit with longer hold for higher-quality operators where Capital, by Studio <span class="brand-b">b.</span> becomes a long-term capital partner. These are businesses built through years of transatlantic relationships. Embedded warrants on every deal. These relationships generate the proactive co-invest SPV opportunities that flow exclusively to fund LPs.</p>
       <div class="spec-row">
         <div class="spec-card flagship">
           <p class="spec-tag">Flagship · ~75%</p>
@@ -398,11 +441,11 @@
     </div>
     <div class="narr-body">
       <h2>The same data that informs our underwriting is published publicly every quarter.</h2>
-      <p>Studio B Capital sits inside a broader consulting and research practice. The consulting work puts us in rooms with operators, advisors, and capital providers across the US and UK lower middle market. That access produces relationships — and it produces data.</p>
-      <p>The Studio B Direct Lending Index (SBDLI) is our quarterly publication tracking direct lending rates, structures, and recovery patterns across both jurisdictions. It draws on thirty years of cross-jurisdictional default and recovery data assembled by the principals. We publish it because the market is opaque and LPs deserve to see the benchmarks before they commit capital.</p>
+      <p>Capital, by Studio <span class="brand-b">b.</span> sits inside a broader consulting and research practice. The consulting work puts us in rooms with operators, advisors, and capital providers across the US and UK lower middle market. That access produces relationships — and it produces data.</p>
+      <p>The Studio <span class="brand-b">b.</span> Direct Lending Index (SBDLI) is our quarterly publication tracking direct lending rates, structures, and recovery patterns across both jurisdictions. It draws on thirty years of cross-jurisdictional default and recovery data assembled by the principals. We publish it because the market is opaque and LPs deserve to see the benchmarks before they commit capital.</p>
       <div class="sbdli-strip">
         <span class="sbdli-label">SBDLI</span>
-        <p class="sbdli-body">Studio B Direct Lending Index — published quarterly at <a href="https://benchmarks.b.studio">benchmarks.b.studio</a>. US and UK lower middle market direct lending rates, structures, and recovery data. LP participation in Fund I includes full dataset access and backtesting access.</p>
+        <p class="sbdli-body">Studio b. Direct Lending Index — published quarterly at <a href="https://benchmarks.b.studio">benchmarks.b.studio</a>. US and UK lower middle market direct lending rates, structures, and recovery data. LP participation in Fund I includes full dataset access and backtesting access.</p>
       </div>
     </div>
   </div>
@@ -412,7 +455,7 @@
 <section class="gateway-section">
   <p class="section-tag">LP-exclusive equity gateway</p>
   <h2>Four mechanisms. One fund. Never offered to outside capital.</h2>
-  <p class="gateway-intro">The credit relationship is the gateway to private equity dealflow. Every LP has access to four equity exposure mechanisms that Studio B Capital will never offer to non-fund capital.</p>
+  <p class="gateway-intro">The credit relationship is the gateway to private equity dealflow. Every LP has access to four equity exposure mechanisms that Capital, by Studio <span class="brand-b">b.</span> will never offer to non-fund capital.</p>
   <div class="gateway-grid">
     <div class="gw-card">
       <div class="gw-num">01</div>
@@ -432,7 +475,7 @@
     <div class="gw-card" style="border-right: 1px solid rgba(247,211,68,0.2);">
       <div class="gw-num">04</div>
       <div class="gw-title">Conversion follow-on SPVs</div>
-      <div class="gw-body">LPs can follow conversion events with additional equity at Studio B Capital's per-deal pricing. First right on every converted position.</div>
+      <div class="gw-body">LPs can follow conversion events with additional equity at Capital, by Studio <span class="brand-b">b.</span>'s per-deal pricing. First right on every converted position.</div>
     </div>
   </div>
   <p class="gateway-note">SPV economics: 50bps management fee · 10% preferred return · full GP catch-up · 80/20 split. Offered exclusively to fund LPs — never to outside capital. The credit relationship is the moat.</p>
@@ -443,10 +486,11 @@
     <div class="inq-copy">
       <p class="section-tag-dark">Preliminary LP inquiry</p>
       <h2>We'll talk plainly.</h2>
-      <p>Studio B Capital is a confidential investor opportunity. No deck until after the first call. Book a time and we'll talk about the fund, the products, and whether there's a fit.</p>
+      <p>Capital, by Studio <span class="brand-b">b.</span> is a confidential investor opportunity. No deck until after the first call. Book a time and we'll talk about the fund, the products, and whether there's a fit.</p>
       <p>Qualified purchasers and institutional LPs only. Fund I first close Q3 2026. Anchor LPs receive founding-LP economics: fee concessions, MFN + syndication rights, LPAC seat option.</p>
     </div>
     <div>
+      <p class="section-tag-dark" style="margin-bottom: 0.75rem;">Schedule a call</p>
       <a href="https://meetings.hubspot.com/bibelhausen/studio-b-capital-lp-inquiry" class="inquiry-link" target="_blank" rel="noopener">
         Schedule an introductory call → meetings.hubspot.com/bibelhausen/studio-b-capital-lp-inquiry
       </a>
@@ -458,20 +502,56 @@
 <section class="cross-subscribe" id="dispatch">
   <div class="cross-inner">
     <div class="cross-kicker">ALSO FROM KEVIN</div>
-    <h3 class="cross-headline">Dispatch, by Studio B</h3>
+    <h3 class="cross-headline">Dispatch, by Studio <span class="brand-b">b.</span></h3>
     <p class="cross-body">Field notes from AI transformation engagements — for operators. Kevin also embeds at portfolio companies and publishes what he learns.</p>
     <a href="https://dispatch.b.studio/subscribe" class="cross-cta">Subscribe to Dispatch →</a>
   </div>
 </section>
 
 <footer>
-  <p class="footer-copy">&copy; 2026 Studio B Consulting, LLC</p>
+  <p class="footer-copy">&copy; 2026 Studio <span class="brand-b">b.</span> Consulting, LLC</p>
   <ul class="footer-links">
-    <li><a href="https://b.studio">Studio B</a></li>
+    <li><a href="https://b.studio">Studio b.</a></li>
     <li><a href="https://consulting.b.studio">Consulting</a></li>
     <li><a href="https://benchmarks.b.studio">Benchmarks</a></li>
   </ul>
 </footer>
+
+<script>
+(function() {
+  var FALLBACK = { period: 'Q1 2025', us_spread_bps: 625, uk_recovery_pct: 78 };
+  var DLI_API = 'https://studiob-api-production-2df4.up.railway.app/api/dli/latest';
+
+  function render(d) {
+    var ticker = document.getElementById('dli-ticker');
+    if (!ticker) return;
+    var period = ticker.querySelector('.dli-period');
+    var spread = ticker.querySelector('.dli-spread');
+    var recovery = ticker.querySelector('.dli-recovery');
+    var recoveryMetric = ticker.querySelector('.dli-metric-uk');
+    var recoverySep = ticker.querySelector('.dli-recovery-sep');
+    if (period) period.textContent = d.period;
+    if (spread) spread.textContent = d.us_spread_bps + ' bps';
+    if (d.uk_recovery_pct != null) {
+      if (recovery) recovery.textContent = d.uk_recovery_pct + '%';
+    } else {
+      if (recoveryMetric) recoveryMetric.style.display = 'none';
+      if (recoverySep) recoverySep.style.display = 'none';
+    }
+  }
+
+  render(FALLBACK);
+
+  if (typeof fetch !== 'undefined') {
+    var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timer = controller ? setTimeout(function() { controller.abort(); }, 3000) : null;
+    fetch(DLI_API, controller ? { signal: controller.signal } : {})
+      .then(function(r) { if (r.ok) return r.json(); throw new Error('non-ok'); })
+      .then(function(d) { clearTimeout(timer); render(d); })
+      .catch(function() { clearTimeout(timer); });
+  }
+})();
+</script>
 
 </body>
 </html>

@@ -194,7 +194,49 @@
       font-size: clamp(1.6rem, 2.8vw, 2.4rem); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1rem;
     }
     .inq-copy p { font-size: 0.9rem; line-height: 1.7; color: rgba(13,13,13,0.6); margin-bottom: 0.65rem; }
-    .meetings-iframe-container iframe { border: 3px solid var(--ink) !important; }
+    /* DLI subscribe */
+    .dli-subscribe { background: var(--paper); color: var(--ink); padding: 4rem; border-bottom: 1px solid rgba(26,51,40,0.15); }
+    .dli-inner { max-width: 640px; }
+    .dli-kicker {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(13,13,13,0.4); margin-bottom: 1.5rem;
+    }
+    .dli-headline {
+      font-family: 'Fraunces', serif; font-weight: 900; font-style: italic;
+      font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.1; letter-spacing: -0.02em;
+      color: var(--ink); margin-bottom: 1rem;
+    }
+    .dli-body { font-size: 0.92rem; line-height: 1.65; color: rgba(13,13,13,0.65); margin-bottom: 2rem; }
+    .beehiiv-embed-container { margin-bottom: 1rem; }
+
+    /* Inquiry link */
+    .inquiry-link {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.05em; color: var(--ink); text-decoration: none;
+      border-bottom: 2px solid var(--ink); padding-bottom: 2px; display: inline-block;
+      transition: opacity 0.12s;
+    }
+    .inquiry-link:hover { opacity: 0.6; }
+
+    /* Cross-subscribe */
+    .cross-subscribe { background: var(--forest); color: var(--paper); padding: 4rem; border-top: 1px solid rgba(244,241,235,0.08); }
+    .cross-inner { max-width: 560px; }
+    .cross-kicker {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(244,241,235,0.35); margin-bottom: 1rem;
+    }
+    .cross-headline {
+      font-family: 'Fraunces', serif; font-weight: 900; font-style: italic;
+      font-size: 1.6rem; line-height: 1.1; letter-spacing: -0.02em;
+      color: var(--paper); margin-bottom: 0.75rem;
+    }
+    .cross-body { font-size: 0.88rem; line-height: 1.6; color: rgba(244,241,235,0.6); margin-bottom: 1.5rem; }
+    .cross-cta {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--yolk); text-decoration: none;
+      border-bottom: 1px solid rgba(247,211,68,0.4); padding-bottom: 2px; transition: border-color 0.12s;
+    }
+    .cross-cta:hover { border-color: var(--yolk); }
 
     footer {
       background: var(--forest); padding: 1.75rem 4rem; display: flex;
@@ -243,6 +285,20 @@
     <h1>The Non-Bank Lender for the Global <em>Lower Middle Market.</em></h1>
     <p class="hero-body">The deepest structural gap in LMM credit is not where banks won't lend — it is where banks cannot move quickly enough, structure flexibly enough, or stay long enough. Studio B Capital is purpose-built for that gap.</p>
     <a href="#inquiry" class="cta">Request LP materials</a>
+  </div>
+</section>
+
+<!-- DLI SUBSCRIBE -->
+<section class="dli-subscribe" id="dli">
+  <div class="dli-inner">
+    <div class="dli-kicker">DLI, BY STUDIO B</div>
+    <h2 class="dli-headline">The only open index for LMM direct lending.</h2>
+    <p class="dli-body">Quarterly spread, structure, and recovery data across the global lower middle market. Market event commentary as it happens. We publish it because the benchmarks didn't exist — and LPs deserve to see the data before they commit capital.</p>
+    <div class="beehiiv-embed-container">
+      <iframe src="https://embeds.beehiiv.com/pub_e647b558-3a6e-4a29-87ff-c5fd2b566c35?slim=true" data-test-id="beehiiv-embed"
+        height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important;
+        background-color: transparent; width: 100%;"></iframe>
+    </div>
   </div>
 </section>
 
@@ -390,9 +446,20 @@
       <p>Qualified purchasers and institutional LPs only. Fund I first close Q3 2026. Anchor LPs receive founding-LP economics: fee concessions, MFN + syndication rights, LPAC seat option.</p>
     </div>
     <div>
-      <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/bibelhausen/studio-b-capital-lp-inquiry?embed=true&color=1A3328"></div>
-      <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+      <a href="https://meetings.hubspot.com/bibelhausen/studio-b-capital-lp-inquiry" class="inquiry-link" target="_blank" rel="noopener">
+        Schedule an introductory call → meetings.hubspot.com/bibelhausen/studio-b-capital-lp-inquiry
+      </a>
     </div>
+  </div>
+</section>
+
+<!-- DISPATCH CROSS-SUBSCRIBE -->
+<section class="cross-subscribe" id="dispatch">
+  <div class="cross-inner">
+    <div class="cross-kicker">ALSO FROM KEVIN</div>
+    <h3 class="cross-headline">Dispatch, by Studio B</h3>
+    <p class="cross-body">Field notes from AI transformation engagements — for operators. Kevin also embeds at portfolio companies and publishes what he learns.</p>
+    <a href="https://dispatch.b.studio/subscribe" class="cross-cta">Subscribe to Dispatch →</a>
   </div>
 </section>
 
